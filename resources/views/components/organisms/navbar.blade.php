@@ -42,7 +42,7 @@ class="fixed bg-gray-800/40 inset-0 z-30 hidden fx-open:flex lg:hidden"
                 class="rounded-global">
                 <span class="iconify ph--magnifying-glass text-sm"></span>
             </x-ui.modal.trigger>
-            <x-ui.button href="" variant="flexi" intent="white" size="icon-sm" radius="none"
+            <x-ui.button href="https://github.com/unoforge/laravel-ui" variant="flexi" intent="white" size="icon-sm" radius="none"
                 class="rounded-global">
                 <span class="iconify ph--github-logo"></span>
             </x-ui.button>

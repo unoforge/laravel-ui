@@ -3,8 +3,14 @@
 @import "tailwindcss";
 
 
-@reference "./flexiwind.css";
-@reference "./buttons.css";
+@reference "./flexiwind/base.css";
+@reference "./flexiwind/form.css";
+@reference "./flexiwind/button.css";
+@reference "./flexiwind/ui.css";
+@reference "./flexiwind/utils.css";
+
+
+@reference "./button-styles.css";
 @reference "./utilities.css";
 
 @plugin "@iconify/tailwind4" {
@@ -13,7 +19,13 @@
 }
 
 
+
 @custom-variant dark (&:is(.dark *));
+
+
+html{
+    scroll-behavior: smooth;
+}
 
 :root {
     --global-main-radius: 0.5rem;

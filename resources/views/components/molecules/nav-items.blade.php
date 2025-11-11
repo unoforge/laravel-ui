@@ -1,5 +1,4 @@
 @php
-
     $items = [
         [
             'text' => 'Docs',
@@ -14,9 +13,9 @@
             'href' => '/blocks/hero-sections',
         ],
         [
-            'text' => 'Tools',
-            'href' => '/tools',
-        ],
+            'text' => 'Templates',
+            'href' => '/templates',
+        ]
     ];
 
 @endphp
