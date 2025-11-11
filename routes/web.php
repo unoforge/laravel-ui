@@ -8,6 +8,7 @@ use Livewire\Volt\Volt;
 
 
 Volt::route('/','pages.home-page')->name('pages.home-page');
+Volt::route('/templates','pages.templates')->name('pages.templates');
 
 Route::redirect('/docs','/docs/introduction');
 Route::redirect('/components','/components/accordion');

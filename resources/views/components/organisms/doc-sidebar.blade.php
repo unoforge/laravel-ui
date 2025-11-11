@@ -51,25 +51,6 @@
         class="size-8 text-fg border border-border bg-bg ease-linear absolute top-16 -right-3 flex items-center justify-center lg:hidden rounded-lg z-10">
         <span aria-hidden="true" class="flex iconify ph--caret-left"></span>
     </button>
-    <div class="flex h-max pb-5 px-5 lg:pl-0 lg:pr-4">
-        <button data-dropdown-trigger data-dropdown-id="dropdown-sidebar"
-            class="btn border w-full border-border-input gap-3 p-1.5 pr-3 rounded-lg hover:bg-bg-subtle/80 bg-bg">
-            <div class="text-fg flex items-center w-full justify-between">
-                <span class="p-2 rounded bg-bg-subtle text-lg text-fg mr-3">
-                    <span class="flex iconify simple-icons--laravel"></span>
-                </span>
-                <div class="truncate flex flex-col flex-1 text-left">
-                    <h2 class="text-sm font-medium text-fg-title">Flexiwind</h2>
-                    <p class="text-xs text-fg-muted truncate">Tailwind Components for Laravel</p>
-                </div>
-                <span class="ml-2 flex iconify ph--caret-up-down text-xs"></span>
-            </div>
-        </button>
-        <div role="list" x-dropdown id="dropdown-sidebar"
-            class="z-130 invisible opacity-0 fx-open:visible fx-open:opacity-100 ease-linear duration-200 ui-popper w-[17rem] lg:w-[16rem] bg-bg border border-border ui-card [--card-padding:calc(var(--spacing)*0.5)] [--card-radius:var(--global-main-radius)]">
-            <x-blocks.list-ui-kits />
-        </div>
-    </div>
 
     <x-atoms.scrollable-y class="w-full">
         <nav class="w-full space-y-6 relative px-5 lg:pl-0 lg:pr-4 h-full">
