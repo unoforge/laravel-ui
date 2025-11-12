@@ -14,23 +14,15 @@
 
 @php
     $sizes = [
-        'sm' => 'ui-form-input-sm',
-        'md' => 'ui-form-input-md',
-        'lg' => 'ui-form-input-lg',
+        'sm' => 'p-2 text-xs',
+        'md' => 'p-2.5 text-sm',
+        'lg' => 'p-3 text-sm',
     ];
-    $input_radius = [
-        'none' => '',
-        'sm' => 'rounded-sm',
-        'md' => 'rounded-md',
-        'lg' => 'rounded-lg',
-        '3xl' => 'rounded-3xl',
-        'full' => 'rounded-full',
-    ];
-    $resize_class = $resizeNone ? 'resize-none' : '';
-    $radius_ = $input_radius[$radius] ?? $input_radius['lg'];
 
-    $border_class = $noBorder ? 'border-transparent' : 'border border-border-input shadow-sm bg-bg';
-    $baseClasses = "ui-form-base ui-form-input {$radius_} {$border_class} {$resize_class} text-fg";
+    $resize_class = $resizeNone ? 'resize-none' : '';
+
+    $border_class = $noBorder ? 'border-transparent' : 'border border-border-input bg-bg';
+    $baseClasses = "ui-form-base ui-form-input ui-radius {$border_class} {$resize_class} text-fg min-h-20 shadow ";
     $sizeClasses = $sizes[$size] ?? $sizes['md'];
 
     $id = $attributes->get('id') ?? $attributes->get('name', uniqid('input-'));

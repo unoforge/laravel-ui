@@ -4,16 +4,13 @@
     'size' => 'md',
     'disabled' => false,
     'type' => 'button',
-    'radius' => 'lg',
     'href' => null,
 ])
 
 @php
     use App\Flexiwind\ButtonHelper;
-    use App\Flexiwind\UiHelper;
     $btn_variants = ButtonHelper::getVariants();
 
-    $radius_class = UiHelper::getRadius($radius);
     $sizes = [
         'xs' => 'btn-xs',
         'sm' => 'btn-sm',
@@ -27,7 +24,7 @@
         'icon-xl' => 'btn-icon-xl',
         'none' => '',
     ];
-    $baseClasses = 'btn ease-linear duration-200 ';
+    $baseClasses = 'btn ease-linear duration-200 ui-radius ';
     if ($variant !== 'none') {
         $baseClasses .= isset($btn_variants[$variant]) ? $btn_variants[$variant]['base'] : 'ee';
     }
@@ -49,7 +46,6 @@
         $baseClasses,
         $variantClasses,
         $sizeClasses,
-        $radius_class,
         'cursor-not-allowed' => $disabled,
     ]);
 

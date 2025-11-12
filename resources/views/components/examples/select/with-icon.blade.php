@@ -1,26 +1,26 @@
 <form action="#" class="space-y-4 w-full text-fg">
-    <div class="relative">
-        <x-ui.select name="select-country_label_1" id="select-country_label_1" class="ps-11">
+    <x-ui.input.group>
+        <x-ui.select un-stylled name="select-country_label_1" id="select-country_label_1" class="ps-13 px-3">
             <option value="DRC">DR Congo</option>
             <option value="TZ">Tanzania</option>
             <option value="MA">Morocco</option>
             <option value="NG">Nigeria</option>
         </x-ui.select>
-        <span aria-hidden="true" class="absolute left-3 h-full flex items-center top-0 text-fg pointer-events-none">
+        <x-ui.input.leading absolute class="text-fg">
             <span aria-hidden="true" class="flex iconify ph--flag text-lg"></span>
-        </span>
-    </div>
+        </x-ui.input.leading>
+    </x-ui.input.group>
 
-    <div class="flex">
-        <span aria-hidden="true"
-            class="p-2 flex items-center text-fg bg-bg-subtle rounded-r-md border-y border-l border-border-strong/90 pointer-events-none">
+    <x-ui.input.group>
+        <x-ui.input.leading aria-hidden="true"
+            class="p-2 text-fg bg-bg-subtle rounded-r-ui">
             <span aria-hidden="true" class="flex iconify ph--flag text-lg"></span>
-        </span>
-        <x-ui.select radius="none" class="rounded-r-lg" name="select-country_label_2" id="select-country_label_2">
+        </x-ui.input.leading>
+        <x-ui.select un-stylled class="rounded-r-ui" name="select-country_label_2" id="select-country_label_2">
             <option value="DRC">DR Congo</option>
             <option value="TZ">Tanzania</option>
             <option value="MA">Morocco</option>
             <option value="NG">Nigeria</option>
         </x-ui.select>
-    </div>
+    </x-ui.input.group>
 </form>

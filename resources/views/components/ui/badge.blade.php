@@ -3,7 +3,6 @@
 @php
     use App\Flexiwind\UiHelper;
     $variants = UiHelper::getVariants();
-    $radius_class = UiHelper::getRadius($radius);
     $sizes = [
         'default' => 'badge-md',
         'xs' => 'badge-xs',
@@ -13,7 +12,7 @@
 
     $variantClass = $variant == 'default' ? ' bg-bg-subtle text-fg' : UiHelper::getClasses($variant, $intent);
 
-    $className = "{$sizes[$size ?? 'default']} {$variantClass} {$radius_class} {$class}";
+    $className = "{$sizes[$size ?? 'default']} ui-radius {$variantClass} {$class}";
 @endphp
 <span {{ $attributes->merge(['class' => $className]) }}>
     {{ $slot }}

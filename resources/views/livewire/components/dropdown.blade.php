@@ -209,6 +209,6 @@
     <x-md.h3>JavaScript API</x-md.h3>
     <x-md.paragraph>
         To know more about the JavaScript API, check the <x-docs.link
-            href="https://flexilla-docs.vercel.app/components/tabs">Flexilla</x-docs.link> documentation.
+            href="https://flexilla-docs.vercel.app/docs/components/dropdown">Flexilla Dropdown</x-docs.link> documentation.
     </x-md.paragraph>
 </x-layouts.doc-page-wrapper>

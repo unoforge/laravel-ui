@@ -18,27 +18,30 @@ class ComponentSource extends Component
     #[Computed]
     public function data()
     {
-        // Create a cache key based on the files array
-        $cacheKey = 'component_source_' . md5(json_encode($this->files));
-
-        return Cache::remember($cacheKey, now()->addHours(24), function () {
-            return collect($this->files)->map(function ($filePath) {
-                // Cache individual file contents with last modified time
-                $fileCacheKey = 'file_content_' . md5($filePath);
-                $lastModified = file_exists(base_path($filePath)) ? filemtime(base_path($filePath)) : 0;
-                $code = Cache::remember(
-                    $fileCacheKey,
-                    now()->addHours(24),
-                    fn() => file_exists(base_path($filePath)) ? file_get_contents(base_path($filePath)) : ''
-                );
-
+        return collect($this->files)->map(function ($filePath) {
+            $fullPath = base_path($filePath);
+            
+            if (!file_exists($fullPath)) {
                 return [
                     'lang' => str_contains($filePath, '.blade') ? 'blade' : $this->determineLang($filePath),
-                    'code' => $code,
+                    'code' => '',
                     'name' => basename($filePath),
                 ];
-            })->toArray();
-        });
+            }
+
+            $lastModified = filemtime($fullPath);
+            $cacheKey = 'file_content_' . md5($filePath . '_' . $lastModified);
+            
+            $code = Cache::rememberForever($cacheKey, function () use ($fullPath) {
+                return file_get_contents($fullPath) ?: '';
+            });
+
+            return [
+                'lang' => str_contains($filePath, '.blade') ? 'blade' : $this->determineLang($filePath),
+                'code' => $code,
+                'name' => basename($filePath),
+            ];
+        })->toArray();
     }
 
     protected function determineLang(string $path): string

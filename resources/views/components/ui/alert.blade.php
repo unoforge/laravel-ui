@@ -1,10 +1,8 @@
-@props(['class' => '', 'variant' => 'solid', 'intent' => 'gray', 'size' => 'default', 'radius'=>'md'])
+@props(['class' => '', 'variant' => 'solid', 'intent' => 'gray', 'size' => 'default'])
 
 @php
     use App\Flexiwind\UiHelper;
     $variants = UiHelper::getVariants();
-
-    $radius_class = UiHelper::getRadius($radius);
 
     $sizes = [
         'default' => 'p-4 text-sm',
@@ -12,12 +10,12 @@
         'sm' => 'p-2.5 text-sm',
         'lg' => 'p-5',
     ];
-    
+
     $base = "relative w-full {$sizes[$size ?? 'default']} ";
 
     $variantClass = $variant == 'default' ? ' bg-bg-subtle text-fg' : UiHelper::getClasses($variant, $intent);
 
-    $className = "{$base} {$variantClass} {$class} {$radius_class}";
+    $className = "{$base} {$variantClass} {$class} ui-radius";
 @endphp
 
 <div {{ $attributes->merge(['class' => $className]) }}>

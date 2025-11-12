@@ -7,8 +7,9 @@
     'noBorder' => false,
     'inlinedLabel' => false,
     'labelClass' => '',
-    'radius' => 'lg',
     'unStylled' => false,
+    'bgNone' => false,
+    'radiusNone' => false,
 ])
 
 @php
@@ -18,19 +19,13 @@
         'md' => 'ui-form-input-md',
         'lg' => 'ui-form-input-lg',
     ];
-    $input_radius = [
-        'none' => '',
-        'sm' => 'rounded-sm',
-        'md' => 'rounded-md',
-        'lg' => 'rounded-lg',
-        '3xl' => 'rounded-3xl',
-        'full' => 'rounded-full',
-    ];
-    $radius_ = $input_radius[$radius] ?? $input_radius['lg'];
 
-    $border_class = $noBorder ? 'border-transparent' : 'border border-border-input shadow bg-bg';
-    $baseClasses = $unStylled ? '' : "ui-form-base ui-form-input {$radius_} {$border_class} text-fg";
-    $sizeClasses = $sizes[$size] ?? $sizes['md'];
+    $bg_class = $bgNone ? '' : 'bg-bg';
+    $radius = $radiusNone ? '' : 'ui-radius';
+
+    $border_class = $noBorder ? 'border-transparent' : 'border border-border-input';
+    $baseClasses = $unStylled ? '' : "ui-form-base ui-form-input shadow {$radius} {$bg_class} {$border_class} text-fg";
+    $sizeClasses = $unStylled ? '' : $sizes[$size] ?? $sizes['md'];
 
     $id = $attributes->get('id') ?? $attributes->get('name', uniqid('input-'));
 

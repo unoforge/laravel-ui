@@ -1,4 +1,4 @@
-@props(['size' => 'default', 'radius' => 'circle', 'text' => null, 'variant' => 'solid', 'intent' => 'gray'])
+@props(['size' => 'default', 'radius' => 'circle', 'text' => null, 'variant' => 'solid', 'intent' => 'gray', 'radiusNone'=>false])
 
 @php
     use App\Flexiwind\UiHelper;
@@ -18,7 +18,7 @@
         'avatar-placeholder',
         $av_p_sizes[$size] ?? $av_p_sizes['default'],
         UiHelper::getClasses($variant, $intent),
-        UiHelper::getRadius($radius),
+       $radiusNone ? '':"rounded-full"
     ]) }}>
     @if ($text)
         {{ $text }}

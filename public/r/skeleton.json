@@ -10,7 +10,7 @@
             "path": "resources/views/components/ui/skeleton.blade.php",
             "type": "registry:component",
             "target": "resources/views/components/ui/skeleton.blade.php",
-            "content": "@props(['radius' => 'circle', 'class' => '', 'noBg' => false])\n\n@php\n    $squeleton_radius = [\n        'sm' => 'rounded-sm',\n        'base' => 'rounded',\n        'lg' => 'rounded-lg',\n        'xl' => 'rounded-xl',\n        'circle' => 'rounded-full',\n    ];\n    $bgClass = $noBg ? '' : 'bg-bg-surface-elevated';\n    $sk_radius = $squeleton_radius[$radius] ?? $squeleton_radius['circle'];\n    $className = \"animate-pulse {$bgClass} {$sk_radius} {$class}\";\n@endphp\n\n<div {{ $attributes->merge([\n    'class' => $className,\n]) }}></div>\n"
+            "content": "@props(['radiusNonde' => false, 'class' => '', 'bgNone' => false])\n\n@php\n    $bgClass = $bgNone ? '' : 'bg-bg-surface-elevated';\n    $sk_radius = $radiusNone ? '' : 'rounded-full';\n    $className = \"animate-pulse {$bgClass} {$sk_radius} {$class}\";\n@endphp\n\n<div {{ $attributes->merge([\n    'class' => $className,\n]) }}></div>\n"
         }
     ]
 }

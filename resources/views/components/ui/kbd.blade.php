@@ -3,7 +3,6 @@
 @php
     use App\Flexiwind\UiHelper;
     $variants = UiHelper::getVariants();
-    $radius_class = UiHelper::getRadius($radius);
 
     $sizes = [
         'none'=>'',
@@ -17,7 +16,7 @@
     $variantClass = $variant == 'default' ? ' bg-bg-subtle text-fg' : UiHelper::getClasses($variant, $intent);
 
     $kbd_size = $sizes[$size] ?? $sizes['md'];
-    $className = "{$kbd_size} {$variantClass} {$class} {$radius_class}";
+    $className = "{$kbd_size} {$variantClass} {$class} ui-radius";
 @endphp
 <kbd {{ $attributes->merge(['class' => $className]) }}>
     {{ $slot }}

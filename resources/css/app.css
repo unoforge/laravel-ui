@@ -36,6 +36,11 @@ html{
     --ring-offset-color: var(--c-bg);
 
     --focus-ring: var(--c-primary-200);
+
+    --ui-radius: var(--radius-lg);
+    --card-radius:var(--radius-lg);
+    --checkbox-radius: var(--radius-sm);
+    --checkbox-bg: var(--color-bg-white);
 }
 
 .dark {
@@ -49,6 +54,9 @@ html{
     --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
     --radius-global: var(--global-main-radius);
+    --radius-ui: var(--ui-radius);
+    --radius-card: var(--card-radius);
+    --radius-checkbox: var(--checkbox-radius);
 
     --color-white: var(--c-white);
     --color-dark: var(--c-gray-950);
@@ -65,20 +73,19 @@ html{
     --color-fg-subtitle: var(--c-fg-subtitle);
     --color-fg: var(--c-fg);
     --color-fg-muted: var(--c-fg-muted);
-    --color-fg-soft: var(--c-fg-soft);
 
     --color-bg: var(--c-bg);
     --color-bg-subtle: var(--c-bg-subtle);
     --color-bg-surface: var(--c-bg-surface);
     --color-bg-muted: var(--c-bg-muted);
     --color-bg-surface-elevated: var(--c-bg-surface-elevated);
-    --color-bg-card: var(--c-bg-card);
-    --color-bg-card-gray: var(--c-bg-card-gray);
-    --color-bg-overlay: var(--c-bg-overlay);
-    --color-bg-overlay-gray: var(--c-bg-overlay-gray);
-
-
-    --color-bg-progressbar: var(--c-bg-progressbar);
+    --color-card: var(--c-card);
+    --color-card-gray: var(--c-card-gray);
+    --color-popover: var(--c-bg);
+    --color-popover-gray: var(--c-card-gray);
+    --color-overlay: var(--c-overlay);
+    --color-overlay-gray: var(--c-overlay-gray);
+    --color-progressbar: var(--c-progressbar);
 
     --color-border-strong: var(--c-border-strong);
     --color-border-amphasis: var(--c-border-amphasis);

@@ -17,19 +17,18 @@
     --c-fg-subtitle: var(--c-gray-800);
     --c-fg: var(--c-gray-700);
     --c-fg-muted: var(--c-gray-600);
-    --c-fg-soft: var(--c-gray-500);
 
     --c-bg: var(--c-white);
     --c-bg-subtle: var(--c-gray-100);
     --c-bg-surface: var(--c-gray-50);
     --c-bg-muted: var(--c-gray-200);
     --c-bg-surface-elevated: var(--c-gray-300);
-    --c-bg-card: var(--c-bg);
-    --c-bg-card-gray: var(--c-bg-subtle);
-    --c-bg-overlay: var(--c-bg);
-    --c-bg-overlay-gray: var(--c-bg-subtle);
+    --c-card: var(--c-bg);
+    --c-card-gray: var(--c-bg-subtle);
+    --c-overlay: var(--c-bg);
+    --c-overlay-gray: var(--c-bg-subtle);
 
-    --c-bg-progressbar: var(--color-bg-muted);
+    --c-progressbar: var(--color-bg-muted);
     --c-bg-range:var(--color-bg-muted);
 
     --c-border-strong: var(--c-gray-300);

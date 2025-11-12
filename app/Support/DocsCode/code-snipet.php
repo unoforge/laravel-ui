@@ -228,4 +228,35 @@ JS,
         ],
     ],
 
+
+
+
+    'add-offcanvas-in-app' => [
+        'lang' => 'js',
+        'name' => 'flexilla.js',
+        'code' => <<<'JS'
+import { Offcanvas } from "@flexilla/offcanvas"
+
+// init Modal for all Element with data-app-modal attribute
+Offcanvas.autoInit('[data-app-offcanvas]') 
+JS,
+        'lines' => [
+            1 => 'added',
+            4 => 'added',
+        ],
+    ],
+    'add-offcanvas-plugin-in-app' => [
+        'lang' => 'js',
+        'name' => 'flexilla.js',
+        'code' => <<<'JS'
+import AlpineOffcanvas from "@flexilla/alpine-offcanvas"
+
+Alpine.plugin(AlpineOffcanvas)
+JS,
+        'lines' => [
+            1 => 'added',
+            3 => 'added',
+        ],
+    ],
+
 ];
