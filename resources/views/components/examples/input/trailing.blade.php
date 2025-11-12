@@ -1,27 +1,26 @@
-
-<form action="#" class="space-y-4 w-full text-fg">
-    <div class="relative">
-        <x-ui.input type="search" placeholder="Start tapping..."/>
-        <span aria-hidden="true" class="absolute right-3 h-full flex items-center top-0 text-fg pointer-events-none">
-            <span aria-hidden="true" class="flex iconify ph--magnifying-glass text-lg"></span>                                                  
-        </span>
-    </div>
-    <div class="relative">
-        <x-ui.input type="text" placeholder="Your email here" class="pe-11"/>
-        <span aria-hidden="true" class="absolute text-sm right-3 h-full flex items-center top-0 text-fg pointer-events-none">
-            CDF                         
-        </span>
-    </div>
-    <div class="relative">
-        <x-ui.input type="text" placeholder="Your email here" class="pe-24 "/>
-        <span aria-hidden="true" class="absolute text-sm right-3 h-full flex items-center top-0 text-fg pointer-events-none">
-            @gmail.com                         
-        </span>
-    </div>
-    <div class="flex">
-        <x-ui.input radius="none" type="text" placeholder="Your email here" class="rounded-l-lg"/>
-        <span aria-hidden="true" class="p-2 flex items-center text-fg bg-bg-subtle rounded-r-md border-y border-r border-border-strong/90 pointer-events-none">
-            <span aria-hidden="true" class="flex iconify ph--envelope-open text-lg"></span>                        
-        </span>
-    </div>
+<form class="space-y-4 w-full text-fg">
+    <x-ui.input.group>
+        <x-ui.input un-styled type="email" placeholder="Your email here" class="pe-11 px-3" />
+        <x-ui.input.trailing absolute class="text-fg">
+            <span class="flex text-lg iconify ph--at"></span>
+        </x-ui.input.trailing>
+    </x-ui.input.group>
+    <x-ui.input.group>
+        <x-ui.input un-styled type="text" placeholder="Your email here" class="pe-13 px-3" />
+        <x-ui.input.trailing absolute class="text-sm text-fg">
+            CDF
+        </x-ui.input.trailing>
+    </x-ui.input.group>
+    <x-ui.input.group>
+        <x-ui.input un-styled type="text" placeholder="Your email here" class="pe-16" />
+        <x-ui.input.trailing absolute class="text-sm text-fg">
+            @gmail.com    
+        </x-ui.input.trailing>
+    </x-ui.input.group>
+    <x-ui.input.group>
+        <x-ui.input un-stylled type="text" placeholder="Your email here" class="rounded-r-ui px-3 flex-1" />
+        <x-ui.input.trailing class="px-3 text-fg bg-bg-muted/80 rounded-r-ui">
+            <span class="flex text-lg iconify ph--at"></span>
+        </x-ui.input.trailing>
+    </x-ui.input.group>
 </form>

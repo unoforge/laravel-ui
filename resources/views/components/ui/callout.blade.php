@@ -4,7 +4,6 @@
     'intent' => '',
     'type' => 'default',
     'size' => 'default',
-    'radius' => 'md',
     'title' => null,
     'message' => null,
     'noIcon' => false,
@@ -32,7 +31,7 @@
     $icon = $icons[$type] ?? $icons['default'];
 @endphp
 
-<x-ui.alert :variant="$variant" :intent="$intent_" :size="$size" :radius="$radius"
+<x-ui.alert :variant="$variant" :intent="$intent_" :size="$size"
     {{ $attributes->class([
         'flex items-start gap-4' => !$noIcon,
         $class,

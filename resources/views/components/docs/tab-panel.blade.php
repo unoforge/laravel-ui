@@ -2,7 +2,7 @@
     'value',
     'active' => false,
     'noBorder' => false,
-    'noBg' => '',
+    'bgNone' => '',
     'class' => '',
     'showWithGrid'=>false
 ])

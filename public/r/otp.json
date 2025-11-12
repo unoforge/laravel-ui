@@ -25,7 +25,7 @@
             "path": "resources/views/components/ui/otp/input.blade.php",
             "type": "registry:component",
             "target": "resources/views/components/ui/otp/input.blade.php",
-            "content": "@props([\n    'type' => 'text',\n    'size' => 'md',\n    'disabled' => false,\n    'readonly' => false,\n    'noBorder' => false,\n    'radius' => 'lg',\n    'unStylled' => false,\n])\n\n<x-ui.input data-pin-input maxlength=\"1\" :type=\"$type\" :size=\"$size\" :disabled=\"$disabled\" :readonly=\"$readonly\"\n    :no-border=\"$noBorder\" :radius=\"$radius\" :un-stylled=\"$unStylled\" {{ $attributes->class(['text-center']) }}/>"
+            "content": "@props([\n    'type' => 'text',\n    'size' => 'md',\n    'disabled' => false,\n    'readonly' => false,\n    'noBorder' => false,\n    'unStylled' => false,\n])\n\n<x-ui.input data-pin-input maxlength=\"1\" :type=\"$type\" :size=\"$size\" :disabled=\"$disabled\" :readonly=\"$readonly\"\n    :no-border=\"$noBorder\" :un-stylled=\"$unStylled\" {{ $attributes->class(['text-center']) }}/>"
         }
     ]
 }
